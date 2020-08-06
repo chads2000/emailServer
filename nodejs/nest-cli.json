@@ -1,0 +1,22 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/myemail/src",
+  "monorepo": true,
+  "root": "apps/myemail",
+  "deleteOutDir": true,
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/myemail/tsconfig.app.json"
+  },
+  "projects": {
+    "myemail": {
+      "type": "application",
+      "root": "apps/myemail",
+      "entryFile": "main",
+      "sourceRoot": "apps/myemail/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/myemail/tsconfig.app.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@mono/repo",
+  "version": "0.0.0-rc1",
+  "description": "Mono Repo",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "start": "docker-compose up",
+    "start:rebuild": "docker-compose up --build"
+  },
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.11.2",
+    "npm": "^6.14.5",
+    "npm-check-updates": "^6.0.1",
+    "prettier": "^1.18.2"
+  }
+}

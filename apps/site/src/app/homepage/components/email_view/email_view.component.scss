@@ -1,0 +1,70 @@
+@import '../../../../css/variables';
+
+:host {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  background-color: theme-color($theme-grays, 50);
+  padding: 8px;
+  border: solid 1px theme-color($theme-primary, 900);
+
+  .email_view {
+    padding: 8px;
+    h1 {
+      max-height: 30px;
+      overflow: hidden;
+    }
+
+    .btn_delete,
+    .btn_html,
+    .btn_plain {
+      background-color: theme-color($theme-primary, 100);
+      width: 75px;
+      border: none;
+      margin: 0px 16px;
+      cursor: pointer;
+      &:hover,
+      &:active {
+        background-color: theme-color($theme-primary, 200);
+      }
+    }
+
+    .btn_delete {
+      float: right;
+      margin: 16px 0px;
+    }
+
+    .btn_close {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+    }
+  }
+
+  .view_pane {
+    max-height: 375px;
+    height: 100vh;
+    width: 100%;
+    overflow: scroll;
+    border: solid 1px theme-color($theme-primary, 900);
+    padding: 8px;
+
+    @include tablet() {
+      max-height: 450px;
+    }
+  }
+
+  @include tablet() {
+    position: relative;
+    min-width: 75%;
+    display: block !important;
+    border-left: none;
+
+    .btn_close {
+      display: none;
+    }
+  }
+}

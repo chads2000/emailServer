@@ -1,0 +1,25 @@
+@import '../../../../css/variables';
+
+:host {
+  li {
+    cursor: pointer;
+    padding: 8px;
+    border-bottom: solid 1px theme-color($theme-primary, 900);
+
+    &:hover,
+    &:focus {
+      background-color: theme-color($theme-primary, 100);
+    }
+    &.active {
+      background-color: theme-color($theme-primary, 200);
+    }
+    &.unread {
+      font-weight: bold;
+    }
+
+    span {
+      font-size: rem-cal(10);
+      color: theme-color($theme-grays, 600);
+    }
+  }
+}

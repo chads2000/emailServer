@@ -1,0 +1,7 @@
+<li (click)="view()" [ngClass]="{ active: isActive$ | async, read: read, unread: !read }">
+  {{ subject
+  }}<span
+    ><br /><a href="mailto:{{ fromEmail }}">{{ from }}</a
+    ><br />{{ date | date: 'medium' }}
+  </span>
+</li>

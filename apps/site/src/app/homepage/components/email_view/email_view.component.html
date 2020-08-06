@@ -1,0 +1,26 @@
+<div class="email_view" *ngIf="loaded">
+  <button class="btn_close" (click)="close()">close</button>
+  <h1>{{ subject }}</h1>
+  <p>
+    From: <a href="mailto:{{ fromEmail }}">{{ from }}</a
+    ><br />
+    To: <a href="mailto:{{ toEmail }}">{{ to }}</a>
+  </p>
+  <div class="email_view" *ngIf="hasHtmlAndPlain">
+    <button class="btn_html" (click)="display('html')">Html</button>
+    <button class="btn_plain" (click)="display('plain')">Plain</button>
+  </div>
+  <div
+    #htmlView
+    class="view_pane"
+    [ngClass]="{ show: isHtml, hide: !isHtml }"
+    [innerHTML]="html"
+  ></div>
+  <div
+    #plainView
+    class="view_pane"
+    [ngClass]="{ show: !isHtml, hide: isHtml }"
+    [innerHTML]="plain"
+  ></div>
+  <button class="btn_delete" (click)="delete()">Delete</button>
+</div>

@@ -1,0 +1,7 @@
+{
+  "name": "@mono/root_shared",
+  "version": "0.0.0-rc1",
+  "description": "RootShared",
+  "license": "ISC",
+  "private": true
+}

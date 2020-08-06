@@ -1,0 +1,29 @@
+version: "2"
+services:
+  mariadb:
+    container_name: email_mariadb_b
+    extends:
+      file: databases/docker-compose.yml
+      service: mariadb
+    networks:
+      - webnet
+  backend-app:
+    container_name: email_backend_app
+    build:
+      context: ./nodejs/
+      dockerfile: Dockerfile
+    ports:
+      - "3030:3030"
+    links:
+      - mariadb
+    networks:
+      - webnet
+  web-app:
+    container_name: email_web_app
+    build:
+      context: ./apps
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+networks:
+  webnet:

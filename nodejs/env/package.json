@@ -1,0 +1,7 @@
+{
+  "name": "@mono/env",
+  "version": "0.0.0-rc1",
+  "description": "env",
+  "license": "ISC",
+  "private": true
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@trilogy/booking_database",
+  "version": "v0.0.1-rc1",
+  "engines": {
+    "mariadb": ">= v10.3"
+  },
+  "scripts": {
+    "start": "docker-compose up"
+  }
+}

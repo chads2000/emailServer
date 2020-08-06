@@ -1,0 +1,8 @@
+<app-email-list [emails]="emails$ | async"></app-email-list>
+<app-email-view
+  [ngClass]="{
+    show: !!(isViewOpen$ | async),
+    hide: !(isViewOpen$ | async)
+  }"
+  [email]="email$ | async"
+></app-email-view>

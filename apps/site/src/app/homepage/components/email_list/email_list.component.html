@@ -1,0 +1,6 @@
+<div *ngIf="emails.length === 0">
+  No Emails
+</div>
+<ul class="email_list" *ngIf="emails.length > 0">
+  <app-email-list-item *ngFor="let email of emails" [email]="email"></app-email-list-item>
+</ul>

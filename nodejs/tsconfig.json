@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@environments/*": ["environments/*"],
+      "@shared/*": ["shared/*"],
+      "@rootShared/*": ["./node_modules/@mono/root_shared/*"]
+    },
+    "outDir": "./dist",
+    "sourceMap": true,
+    "declaration": false,
+    "removeComments": false,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "target": "es6",
+    "types": ["node"],
+    "typeRoots": ["./node_modules/@types"],
+    "lib": ["es2017", "dom"]
+  },
+  "include": ["**/*", "node_modules/@mono/**/*"],
+  "exclude": ["node_modules", "dist", "testing", "**/testing"]
+}
